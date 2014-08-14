@@ -1,5 +1,6 @@
 
-==== The xfp project ====
+The xfp project
+==
 
 xfp is a tool that can synthesize rewrites of an arithmetic expressions which
 are more accurate when implemented in fixed-point arithmetic. The search is performed
@@ -19,7 +20,9 @@ synthesizing more precise fixed-point expressions.
 
 Examples are located in the inputs/ directory.
 
-=== Analysis tool ===
+Analysis tool
+----
+
 The analysis_tool/ directory contains the source files and
 a build file for sbt (simple-build-tool).
 
@@ -34,7 +37,8 @@ Start sbt in interactive mode in the analysis_tool directory.
 Note: if you want to make changes visible for GP,
 you need to replace the xfp.jar in the lib/ directory.
 
-===  GP  ===
+GP
+----
 The xfp specific source code is in the ec/app/fixed/ directory
 and the source code for the expression parser from parser.jar is located
 in ec/utils/.
