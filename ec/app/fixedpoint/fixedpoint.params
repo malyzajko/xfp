@@ -1,0 +1,117 @@
+
+# Parameters to do rewriting of arithmetic expressions using genetic programming
+parent.0 = ../../gp/koza/koza.params
+
+# Keep the same seed for debugging. Choosing 'time' will pick a different seed each time.
+# Other suitable seeds may be: 123456789, 362436000, 521288629, 7654321
+seed.0 = 4357
+#seed.0 = time
+
+# How many top individuals to pass on unmodified to the next generation.
+breed.elite.0 = 2
+
+# Number of generations to run.
+generations = 30
+
+# Population size.
+pop.subpop.0.size = 30
+
+# Number of individuals to consider for tournament selection.
+select.tournament.size = 4
+
+# #########################
+# Pipeline with crossover
+# #########################
+#With which probability do we do crossover
+pop.subpop.0.species.pipe.source.0.likelihood = 1.0
+
+pop.subpop.0.species.pipe = ec.app.fixedpoint.MutationPipeline
+pop.subpop.0.species.pipe.source.0 = ec.app.fixedpoint.CrossoverPipeline
+pop.subpop.0.species.pipe.source.0.source.0 = ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1 = ec.select.TournamentSelection
+pop.subpop.0.species.pipe.num-sources = 1
+pop.subpop.0.species.pipe.ns.0 = ec.gp.koza.KozaNodeSelector
+pop.subpop.0.species.pipe.source.0.ns.0 = ec.gp.koza.KozaNodeSelector
+
+# Name of run to put in the results file.
+stat.name-of-run = DC_motor_position
+
+# Path to file with expression.
+#gp.tc.0.init.file-name = inputs/control_benchmarks/bicycle_syn/bicycle_state2.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/batch_reactor_process_syn/batch_reactor_process_out2.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/inverted_pendulum4_syn/inverted_pendulum4_state4.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/pitch_syn/pitch_state3.txt
+gp.tc.0.init.file-name = inputs/control_benchmarks/DC_motor_position_syn/DC_motor_position_out1.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/batch_processor/batch_processor_state2.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/traincar/traincar4/traincar4_state1.txt
+#gp.tc.0.init.file-name = inputs/control_benchmarks/jet_engine/jet_engine.txt
+#gp.tc.0.init.file-name = inputs/others/bspline1.txt
+
+# Path to inputs file.
+#eval.problem.file-name = inputs/control_benchmarks/bicycle_syn/bicycle_state_inputs
+#eval.problem.file-name = inputs/control_benchmarks/batch_reactor_process/inputs
+#eval.problem.file-name = inputs/control_benchmarks/inverted_pendulum4_syn/inverted_pendulum4_state_inputs
+#eval.problem.file-name = inputs/control_benchmarks/pitch_syn/pitch_state_inputs
+eval.problem.file-name = inputs/control_benchmarks/DC_motor_position_syn/DC_motor_position_out_inputs
+#eval.problem.file-name = inputs/control_benchmarks/batch_reactor_process_syn/batch_reactor_process_out_inputs
+#eval.problem.file-name = inputs/control_benchmarks/traincar/traincar4/traincar4_state_inputs
+#eval.problem.file-name = inputs/control_benchmarks/jet_engine/jet_engine_inputs
+#eval.problem.file-name = inputs/others/bspline1_inputs
+
+# Total bitlength of the problem.
+eval.problem.bitlength = 16
+
+stat = ec.simple.SimpleStatistics
+
+# Debug information
+eval.problem.debug-info = true
+
+
+
+# ----------------------------------
+#  Values after this point are more or less fixed
+# ----------------------------------
+
+# Use our own custom tree builder for initializing a population.
+gp.tc.0.init = ec.app.fixedpoint.ExpressionBuilder
+
+# We have one function set
+gp.fs.size = 1
+gp.fs.0 = ec.gp.GPFunctionSet
+# Call it "f0"
+gp.fs.0.name = f0
+
+# We have ... functions in the function set:
+gp.fs.0.size = 6
+gp.fs.0.func.0 = ec.app.fixedpoint.Constant
+gp.fs.0.func.0.nc = nc0
+gp.fs.0.func.1 = ec.app.fixedpoint.Variable
+gp.fs.0.func.1.nc = nc0
+gp.fs.0.func.2 = ec.app.fixedpoint.Neg
+gp.fs.0.func.2.nc = nc1
+gp.fs.0.func.3 = ec.app.fixedpoint.Add
+gp.fs.0.func.3.nc = nc2
+gp.fs.0.func.4 = ec.app.fixedpoint.Mult
+gp.fs.0.func.4.nc = nc2
+gp.fs.0.func.5 = ec.app.fixedpoint.Inv
+gp.fs.0.func.5.nc = nc1
+
+eval.problem = ec.app.fixedpoint.FixedpointOptimization
+eval.problem.data = ec.app.fixedpoint.ExprData
+
+# Default values for KozaNodeSelection; we use the default class to
+# select nodes for mutation.
+# The default is 10% terminals, 90% nonterminals when possible,
+# 0% "always pick the root", 0% "pick any node"
+gp.koza.ns.terminals = 0.0
+gp.koza.ns.nonterminals = 1.0
+gp.koza.ns.root = 0.0
+
+
+# Old pipeline with only mutation
+#pop.subpop.0.species.pipe = ec.app.fixedpoint.MutationPipeline
+#pop.subpop.0.species.pipe.num-sources = 1
+#pop.subpop.0.species.pipe.source.0 = ec.select.TournamentSelection
+#pop.subpop.0.species.pipe.ns.0 = ec.gp.koza.KozaNodeSelector
+
+

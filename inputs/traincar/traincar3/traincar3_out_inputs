@@ -1,0 +1,10 @@
+Block 0
+Atomic_DWork_DiscreteStateSpace_DSTATE_0 Atomic_DWork_DelayStateX_DSTATE_0 1 30 25 -3 5
+Atomic_DWork_DiscreteStateSpace_DSTATE_1 Atomic_DWork_DelayStateX_DSTATE_1 1 30 25 -3 5
+Atomic_DWork_DiscreteStateSpace_DSTATE_2 Atomic_DWork_DelayStateX_DSTATE_2 1 30 25 -3 5
+Atomic_DWork_DiscreteStateSpace_DSTATE_3 Atomic_DWork_DelayStateX_DSTATE_3 1 30 25 -6 11
+Atomic_DWork_DiscreteStateSpace_DSTATE_4 Atomic_DWork_DelayStateX_DSTATE_4 1 30 25 -6 11
+Atomic_DWork_DiscreteStateSpace_DSTATE_5 Atomic_DWork_DelayStateX_DSTATE_5 1 30 25 -6 11
+Atomic_DWork_DiscreteStateSpace_DSTATE_6 Atomic_DWork_DelayStateX_DSTATE_6 1 30 25 -6 11
+End of Inputs
+

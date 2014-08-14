@@ -1,0 +1,10 @@
+Block 0
+Atomic_U_y_0 Atomic_U_y_0 1 30 24 0 10
+Atomic_U_y_1 Atomic_U_y_1 1 30 24 0 10
+Atomic_U_y_2 Atomic_U_y_2 1 30 24 0 10
+Atomic_DWork_DiscreteStateSpace_DSTATE_0 Atomic_DWork_DelayStateX_DSTATE_0 1 30 25 -2 9
+Atomic_DWork_DiscreteStateSpace_DSTATE_1 Atomic_DWork_DelayStateX_DSTATE_1 1 30 25 -2 9
+Atomic_DWork_DiscreteStateSpace_DSTATE_2 Atomic_DWork_DelayStateX_DSTATE_2 1 30 25 0 10
+Atomic_DWork_DiscreteStateSpace_DSTATE_3 Atomic_DWork_DelayStateX_DSTATE_3 1 30 25 0 10
+Atomic_DWork_DiscreteStateSpace_DSTATE_4 Atomic_DWork_DelayStateX_DSTATE_4 1 30 25 0 10
+End of Inputs

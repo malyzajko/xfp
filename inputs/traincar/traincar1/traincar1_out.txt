@@ -1,0 +1,1 @@
+(-3.795323E+02) * Atomic_DWork_DiscreteStateSpace_DSTATE_0 + (-5.443608E+02) * Atomic_DWork_DiscreteStateSpace_DSTATE_1 + 92.729 * Atomic_DWork_DiscreteStateSpace_DSTATE_2 + 4.5165916241610748E+03

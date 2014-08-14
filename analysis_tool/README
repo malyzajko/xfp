@@ -1,0 +1,52 @@
+This project is set up to compile and run with sbt (simple-build-tool).
+You can of course use any other tools, all the source files are in the
+directory src/.
+
+
+How to compile with sbt
+==========================
+In the directory analysis_tool (where you find build.sbt) type "sbt",
+assuming sbt is installed on your system. This starts sbt in interactive mode.
+Once sbt has installed on the necessary files, you get a prompt,
+where typing "compile" compiles everything it finds in src/
+and puts the binaries into target/.
+
+(Note, that sbt automatically creates a project/ directory which you can ignore.)
+
+How to create a jar file
+==========================
+In the sbt prompt, type "package". You'll find the .jar file somewhere
+in the depths of target/.
+
+
+How to run
+==========================
+There are several runnable Main files in the project. If you type "run"
+in sbt, they will all be listed, and you can select one to run by typing
+the appropriate number (the order may be different on your machine):
+  [1] xfp.simulation.TestExamples
+  [2] TestMain
+  [3] XfpMain
+  [4] ExprEnumeration
+
+
+- XfpMain is the standard command line interface to the analysis tool.
+  You can get the options with "run -help" and selecting 3 (or your number
+  corresponding to XfpMain).
+
+To run a standard analysis on one of the examples in inputs/ type the following:
+run -a -code ../inputs/pitch/pitch_out1.txt -inputs ../inputs/pitch/pitch_out_inputs
+
+*  -a is the option to just do the analysis and print the max. errors
+    alternatively -c will generate C-style fixed-point code and -s Scala like code
+* -code precedes the path to where the code is
+    alternatively, if you just provide an expression, use the -expr switch
+* -inputs precedes the path to the input variables' ranges and formats
+
+
+- ExprEnumeration is a short tool for enumerating all rewriting of an expression.
+  It takes as input one file containg the expression you want to enumerate
+  and prints the result to the console.
+  So for instance, you will find the file test.txt in the current directory,
+  then you can type 'run test.txt' in sbt, select the number of ExprEnumeration
+  and you'll find the generated expressions on your screen.

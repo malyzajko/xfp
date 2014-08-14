@@ -1,0 +1,12 @@
+(-1.13598E-08)*Atomic_DWork_DiscreteStateSpace_DSTATE_0 +
+(1.0)*Atomic_DWork_DiscreteStateSpace_DSTATE_1+
+(1.2786E-07)*Atomic_DWork_DiscreteStateSpace_DSTATE_2+
+(-9.96874E-08)*Atomic_DWork_DiscreteStateSpace_DSTATE_3+
+(3.36288E-05)*Atomic_DWork_DiscreteStateSpace_DSTATE_4+
+(3.94595E-05)*Atomic_DWork_DiscreteStateSpace_DSTATE_5+
+(-6.09589E-05)*Atomic_DWork_DiscreteStateSpace_DSTATE_6+
+(-3.51073E-05)*Atomic_DWork_DiscreteStateSpace_DSTATE_7+
+(2.7313E-06)*Atomic_DWork_DiscreteStateSpace_DSTATE_8+
+(-3.3636111E-05)*Atomic_U_y_0 + (6.0410747E-05)*Atomic_U_y_1+
+(-3.8941208E-05)*Atomic_U_y_2+ (3.5301806E-05)*Atomic_U_y_3+
+(-2.9009623E-06)*Atomic_U_y_4+ (9.522692E-12)*5.2121094496644555E+03

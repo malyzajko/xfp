@@ -1,0 +1,6 @@
+Block 0
+Atomic_DWork_DiscreteStateSpace_DSTATE_0 Atomic_DWork_DelayStateX_DSTATE_0 1 30 25 0 4.6
+Atomic_DWork_DiscreteStateSpace_DSTATE_1 Atomic_DWork_DelayStateX_DSTATE_1 1 30 25 0 10
+Atomic_DWork_DiscreteStateSpace_DSTATE_2 Atomic_DWork_DelayStateX_DSTATE_2 1 30 25 0 10
+End of Inputs
+
