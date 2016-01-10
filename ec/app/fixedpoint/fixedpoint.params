@@ -37,26 +37,24 @@ pop.subpop.0.species.pipe.source.0.ns.0 = ec.gp.koza.KozaNodeSelector
 stat.name-of-run = DC_motor_position
 
 # Path to file with expression.
-#gp.tc.0.init.file-name = inputs/control_benchmarks/bicycle_syn/bicycle_state2.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/batch_reactor_process_syn/batch_reactor_process_out2.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/inverted_pendulum4_syn/inverted_pendulum4_state4.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/pitch_syn/pitch_state3.txt
-gp.tc.0.init.file-name = inputs/control_benchmarks/DC_motor_position_syn/DC_motor_position_out1.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/batch_processor/batch_processor_state2.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/traincar/traincar4/traincar4_state1.txt
-#gp.tc.0.init.file-name = inputs/control_benchmarks/jet_engine/jet_engine.txt
-#gp.tc.0.init.file-name = inputs/others/bspline1.txt
+#gp.tc.0.init.file-name = inputs/bicycle/bicycle_state2.txt
+#gp.tc.0.init.file-name = inputs/batch_reactor_process/batch_reactor_process_out2.txt
+#gp.tc.0.init.file-name = inputs/inverted_pendulum/inverted_pendulum4_state4.txt
+#gp.tc.0.init.file-name = inputs/pitch/pitch_state3.txt
+gp.tc.0.init.file-name = inputs/DC_motor_position/DC_motor_position_out1.txt
+#gp.tc.0.init.file-name = inputs/batch_reactor_process/batch_reactor_process_state2.txt
+#gp.tc.0.init.file-name = inputs/traincar/traincar4/traincar4_state1.txt
+#gp.tc.0.init.file-name = inputs/bspline/bspline1.txt
 
 # Path to inputs file.
-#eval.problem.file-name = inputs/control_benchmarks/bicycle_syn/bicycle_state_inputs
-#eval.problem.file-name = inputs/control_benchmarks/batch_reactor_process/inputs
-#eval.problem.file-name = inputs/control_benchmarks/inverted_pendulum4_syn/inverted_pendulum4_state_inputs
-#eval.problem.file-name = inputs/control_benchmarks/pitch_syn/pitch_state_inputs
-eval.problem.file-name = inputs/control_benchmarks/DC_motor_position_syn/DC_motor_position_out_inputs
-#eval.problem.file-name = inputs/control_benchmarks/batch_reactor_process_syn/batch_reactor_process_out_inputs
-#eval.problem.file-name = inputs/control_benchmarks/traincar/traincar4/traincar4_state_inputs
-#eval.problem.file-name = inputs/control_benchmarks/jet_engine/jet_engine_inputs
-#eval.problem.file-name = inputs/others/bspline1_inputs
+#eval.problem.file-name = inputs/bicycle/bicycle_state_inputs
+#eval.problem.file-name = inputs/batch_reactor_process/batch_reactor_process_out_inputs
+#eval.problem.file-name = inputs/inverted_pendulum/inverted_pendulum4_state_inputs
+#eval.problem.file-name = inputs/pitch/pitch_state_inputs
+eval.problem.file-name = inputs/DC_motor_position/DC_motor_position_out_inputs
+#eval.problem.file-name = inputs/batch_reactor_process/batch_reactor_process_state_inputs
+#eval.problem.file-name = inputs/traincar/traincar4/traincar4_state_inputs
+#eval.problem.file-name = inputs/bspline/bspline1_inputs
 
 # Total bitlength of the problem.
 eval.problem.bitlength = 16
